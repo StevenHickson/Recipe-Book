@@ -1,0 +1,315 @@
+\documentclass[11pt]{report}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[normalem]{ulem}
+%% Please revise the following command, if your babel
+%% package does not support en-US
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{pgffor}
+\usepackage{filecontents}% Used so that the external files can be placed in this file
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{nicefrac}
+\usepackage{lmodern}
+\usepackage{gensymb}
+\usepackage{titlesec}
+
+%[nowarnings]
+\usepackage{xcookybooky}
+\usepackage[Conny]{fncychap}
+% Bjornstrup
+
+% Margins
+%\topmargin=-0.5in
+\evensidemargin=0in
+\oddsidemargin=0in
+%\textwidth=7.5in
+%\textheight=9.0in
+%\headsep=0.25in 
+
+% command to provide stretchy vertical space in proportion
+\newcommand\nbvspace[1][3]{\vspace*{\stretch{#1}}}
+% allow some slack to avoid under/overfull boxes
+\newcommand\nbstretchyspace{\spaceskip0.5em plus 0.25em minus 0.25em}
+% To improve spacing on titlepages
+\newcommand{\nbtitlestretch}{\spaceskip0.6em}
+
+\newcommand{\newrecipe}{{\newpage}}
+
+%\begin{titlepage}
+%\title{Recipes}
+%\author{The Hickson Family}
+%\date{December 2019}
+%\end{titlepage}
+
+\titleclass{\part}{top} % make part like a chapter
+\titleformat{\part}
+[display]
+{\centering\normalfont\Huge\bfseries}
+{\titlerule[5pt]\vspace{3pt}\titlerule[2pt]\vspace{3pt}\MakeUppercase{\partname} \thepart}
+{0pt}
+{\titlerule[2pt]\vspace{1pc}\huge\MakeUppercase}
+%
+
+\begin{document}
+%\maketitle
+
+\begin{titlepage}
+\begin{center}
+\bfseries
+\nbvspace[1]
+\Huge
+{\nbtitlestretch\huge
+Hickson Family Recipes}
+
+\nbvspace[1]
+\normalsize
+
+Family Recipes\\
+Collected Together
+\nbvspace[1]
+\small BY\\
+\Large The Hickson Family\\[0.5em]
+%\footnotesize AUTHOR OF ``A WORKING ALGEBRA,'' ``WIRELESS TELEGRAPHY,\\
+%ITS HISTORY, THEORY AND PRACTICE,'' ETC., ETC.
+
+\nbvspace[2]
+
+\includegraphics[width=6in]{images/IMG_0506.jpg}
+\nbvspace[3]
+\normalsize
+
+%DOHA\\
+%\large
+%PUBLISHED IN THE WILD
+\nbvspace[1]
+\end{center}
+\end{titlepage}
+
+\clearpage\null\vfill
+\pagestyle{empty}
+\begin{minipage}[b]{0.9\textwidth}
+\footnotesize\raggedright
+\setlength{\parskip}{0.5\baselineskip}
+Copyright \copyright 2019--\the\year\ Steven Hickson\par
+Permission is granted to copy, distribute and\slash or modify 
+the template of this document but not the contents or recipes. 
+\end{minipage}
+\vspace*{2\baselineskip}
+\cleardoublepage
+\rfoot{\thepage}
+
+%\pagestyle{headings}
+% This sets up the header and adds the page number.
+\pagestyle{fancy}
+\fancyhead[R,L]{\leftmark\hspace*{\hfill}Page \thepage}
+%\pagenumbering{arabic}
+%\fancyfoot[R]{\thepage}
+
+%\setcounter{tocdepth}{1}
+\tableofcontents
+
+% This adds the chapter to the top
+
+\part{Breads and Breakfast}
+\chapter{Breads}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.9\linewidth, angle=270]{images/IMG_6927.JPG}
+\end{center}
+\end{figure}
+\newpage
+
+\input{"Recipes/Breads/Foccacia with Savory Olives.tex"}
+\input{"Recipes/Breads/Pizza Dough.tex"}
+
+
+\chapter{Breakfast}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.65\linewidth]{images/IMG_2540.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Breakfast/Baked French Toast Casserole with Maple Syrup.tex"}
+\input{Recipes/Breakfast/Pancakes.tex}
+
+\part{Desserts and Drinks}
+
+\chapter{Desserts}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.65\linewidth]{images/IMG_2198.jpg}
+\end{center}
+\end{figure}
+\newpage
+
+\input{"Recipes/Desserts/Apple Cheese Crisp.tex"}
+\input{"Recipes/Desserts/Apple-Oatmeal Crisp with Irish Whiskey Cream.tex"}
+\input{"Recipes/Desserts/Bourbon Peach Cobbler.tex"}
+\input{"Recipes/Desserts/Cheesecake.tex"}
+\input{"Recipes/Desserts/Chocolate Chip Pie.tex"}
+\input{"Recipes/Desserts/Chocolate Marshmellow Pie.tex"}
+\input{"Recipes/Desserts/Chocolate Mousse.tex"}
+\input{"Recipes/Desserts/Chocolate Pecan Pie.tex"}
+\input{"Recipes/Desserts/Christmas Trifle.tex"}
+\input{"Recipes/Desserts/Classic Pound Cake.tex"}
+\input{"Recipes/Desserts/Coffee Cake.tex"}
+\input{"Recipes/Desserts/Cream Cheese Frosting.tex"}
+\input{"Recipes/Desserts/Eggnog pound cake.tex"}
+\input{"Recipes/Desserts/French Chocolate Silk Pie.tex"}
+\input{"Recipes/Desserts/Ginger Pear Crisp.tex"}
+\input{"Recipes/Desserts/Glazed Pineapple.tex"}
+\input{"Recipes/Desserts/Graham Banana Pudding.tex"}
+\input{"Recipes/Desserts/Grandma's Doughnut Drops.tex"}
+\input{"Recipes/Desserts/Honey Spice Cake with Rum Glaze.tex"}
+\input{"Recipes/Desserts/Peanut Butter Kisses.tex"}
+\input{"Recipes/Desserts/Pear Spice Muffins.tex"}
+\input{"Recipes/Desserts/Pineapple Upside Down Cake.tex"}
+\input{"Recipes/Desserts/Pumpkin Cheesecake with Bourbon Spiked Cream.tex"}
+\input{"Recipes/Desserts/Raspberry Lemon Thumbprint Cookies.tex"}
+\input{Recipes/Desserts/Snickerdoodles.tex}
+\input{"Recipes/Desserts/Spice Molasses Cookies.tex"}
+\input{"Recipes/Desserts/Swedish Tea Ring.tex"}
+
+\chapter{Drinks}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.65\linewidth]{images/IMG_2914.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{Recipes/Drinks/Sangria.tex}
+\input{"Recipes/Drinks/White Sangria.tex"}
+\input{Recipes/Drinks/Snowtini.tex}
+
+
+\part{Meats}
+
+\chapter{Beef}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/IMG_1345.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{Recipes/Meats/Beef/Braciole.tex}
+\input{"Recipes/Meats/Beef/Harris Teeter's Rancher Chuck Roast.tex"}
+\input{"Recipes/Meats/Beef/Hawaiian Beef.tex"}
+\input{"Recipes/Meats/Beef/Holiday Rib Roast.tex"}
+\input{"Recipes/Meats/Beef/French Dip Sandwiches.tex"}
+
+\chapter{Chicken}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/IMG_2109.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{Recipes/Meats/Chicken/Karaage.tex}
+\input{"Recipes/Meats/Chicken/Chicken Enchiladas.tex"}
+\input{"Recipes/Meats/Chicken/Pollo Salsa Verde.tex"}
+\input{"Recipes/Meats/Chicken/Roman style Chicken.tex"}
+\input{"Recipes/Meats/Chicken/Chicken Marsala.tex"}
+\input{"Recipes/Meats/Chicken/Slow cooker Chicken Paprikash.tex"}
+
+\chapter{Pork}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.65\linewidth]{images/IMG_2918.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Meats/Pork/Wonton Poppers.tex"}
+\input{"Recipes/Meats/Pork/Asian Pork Tenderloin.tex"}
+\input{"Recipes/Meats/Pork/Pork Egg Rolls with Sweet and Sour Sauce.tex"}
+\input{"Recipes/Meats/Pork/Double Cut Pork Chops with Caramelized Onion Gravy and pecan.tex"}
+\input{"Recipes/Meats/Pork/Pork Chops, Cabbage and Apples.tex"}
+\input{"Recipes/Meats/Pork/Pulled Pork BBQ.tex"}
+\input{"Recipes/Meats/Pork/Sugarcane Baked Ham with Spiced Apples and Pears.tex"}
+\input{"Recipes/Meats/Pork/Sweet and Sour Sausage.tex"}
+\input{"Recipes/Meats/Pork/Pancetta Pot Pie.tex"}
+
+% Below is how to automate input. But lets do it manually in case we want to rearrange.
+%\foreach \i in {01, 02, 03, 04, 05, 06, 07, 08, 09, 10, ...,99} {%
+%    \edef\FileName{Recipes/Desserts/\i}%     The % here are necessary to eliminate any
+%    \IfFileExists{\FileName}{%  spurious spaces that may get inserted
+%       \input{\FileName}%       at these points
+%    }
+%}
+
+\chapter{Seafood}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/IMG_0456.JPG}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Seafood/Poke Bowl.tex"}
+\input{"Recipes/Seafood/Sushi Rice.tex"}
+\input{"Recipes/Seafood/Batter Fried Grouper Sandwiches.tex"}
+\input{Recipes/Seafood/Jambalaya.tex}
+\input{"Recipes/Seafood/Shrimp Boil.tex"}
+\input{"Recipes/Seafood/Shrimp Po'Bubba's.tex"}
+
+\part{Pasta and Pizzas}
+
+\chapter{Pasta}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/IMG_1095.JPG}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Pasta/Chicken Orzo.tex"}
+\input{"Recipes/Pasta/Creamy Cajun Pasta.tex"}
+\input{"Recipes/Pasta/Fettuccine Alfredo.tex"}
+\input{"Recipes/Pasta/Italian Baked Chicken and Pastina.tex"}
+\input{Recipes/Pasta/Lasagna.tex}
+\input{"Recipes/Pasta/Macaroni and 4 Cheeses.tex"}
+\input{Recipes/Pasta/Manicotti.tex}
+\input{"Recipes/Pasta/Penne a La Vodka Casserole.tex"}
+\input{"Recipes/Pasta/Penne with Shrimp and Herbed Cream Sauce.tex"}
+\input{"Recipes/Pasta/Spaghetti and Meatballs.tex"}
+
+\chapter{Pizza}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/IMG_1083.JPG}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Pizzas/Prosciutto and Arugula Pizza.tex"}
+\input{Recipes/Pizzas/Stromboli.tex}
+
+\part{Soups, Salads, and Sauces}
+
+\chapter{Soups}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=0.9\linewidth]{images/800px-Butternut_squash_soup.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Soups/Beef and Guinness Stew.tex"}
+\input{"Recipes/Soups/Roasted Pear-Butternut Soup with Crumbled Stilton.tex"}
+\input{"Recipes/Soups/Lasagna Soup.tex"}
+
+\chapter{Sauces}
+\begin{figure}[h]
+\begin{center}
+   \includegraphics[width=\linewidth]{images/800px-Making_Spaghetti_Sauce.jpg}
+\end{center}
+\end{figure}
+\newpage
+\input{"Recipes/Sauces/Pizza Sauce.tex"}
+\input{"Recipes/Sauces/Bearnaise Sauce.tex"}
+\input{"Recipes/Sauces/French Dressing.tex"}
+\input{"Recipes/Sauces/Sweet and Sour Sauce.tex"}
+
+\end{document}
